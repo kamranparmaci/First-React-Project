@@ -1,0 +1,7 @@
+.kpCookingRecipes {
+  position: sticky;
+  background-color: #fff;
+  height: 100vh;
+  z-index: 100;
+  overflow: auto;
+}

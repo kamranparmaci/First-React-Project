@@ -1,25 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from "react";
+import "./App.css";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Home from "./components/header/Home";
+import KPCookingRecipes from "./components/recipes/KPCookingRecipes";
+import $ from "jquery";
 
-function App() {
+const App = () => {
+  useEffect(() => {
+    $(".navbar-brand, .btn").on("click", function (e) {
+      if (this.hash !== "") {
+        e.preventDefault();
+
+        const hash = this.hash;
+        $("html, body").animate(
+          {
+            scrollTop: $(hash).offset().top,
+          },
+          600
+        );
+      }
+    });
+  });
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Router>
+        <Switch>
+          <Route path="/" component={Home} />
+          <Route path="/kpCookingRecipes" component={KPCookingRecipes} />
+        </Switch>
+      </Router>
+    </>
   );
-}
+};
 
 export default App;
