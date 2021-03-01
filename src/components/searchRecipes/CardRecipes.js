@@ -1,16 +1,16 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
-import "./CardRecipes.css";
-import axios from "axios";
+import { AxiosContext } from "../../App";
 
-const CardRecipes = ({ result, onRecipes, getId }) => {
+import "./CardRecipes.css";
+
+const CardRecipes = ({ result, path }) => {
   const { title, image, sourceName, id } = result;
 
-  // const linkRef = useRef(null);
+  const axios = useContext(AxiosContext);
 
   const getRecipes = () => {
-    getId(id);
-    onRecipes();
+    axios(id);
   };
 
   return (
@@ -24,9 +24,7 @@ const CardRecipes = ({ result, onRecipes, getId }) => {
               onClick={getRecipes}
               to="/kpCookingRecipes"
               className="stretched-link"
-            >
-              {id}
-            </Link>
+            ></Link>
           </div>
         </div>
       </div>

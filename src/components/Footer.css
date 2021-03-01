@@ -1,0 +1,57 @@
+footer {
+  position: sticky;
+  height: 400px;
+  padding: 2rem;
+  background-image: linear-gradient(to bottom, #f4f4f4, var(--secondary-color));
+}
+
+.footer-content {
+  background-color: #fff;
+  height: auto;
+  padding: 3rem;
+  margin: 0 auto;
+  box-shadow: 13px 13px 15px rgba(136, 253, 26, 0.4);
+  z-index: 100;
+}
+
+.brand {
+  font-family: "Berkshire Swash", sans-serif;
+  color: rgb(146, 146, 20);
+  font-size: 3rem;
+  margin: -3rem 0 3rem;
+  text-align: center;
+  text-decoration: none;
+}
+.brand:hover {
+  text-decoration: none;
+  color: rgb(146, 146, 20);
+}
+
+.footer-content h6 {
+  margin-bottom: 1.5rem;
+}
+
+.social input {
+  color: var(--secondary-color);
+  border: 1px solid var(--secondary-color);
+  padding: 0.5rem;
+  margin: 1rem 0.25rem;
+}
+
+.social i {
+  margin: 1.5rem 0.25rem 0;
+  color: var(--secondary-color);
+}
+
+.footer-links {
+  display: block;
+  color: var(--secondary-color);
+  margin-top: 1rem;
+  font-size: 1.25rem;
+  text-decoration: none;
+}
+
+.footer-links:hover {
+  text-decoration: none;
+  color: var(--secondary-color);
+}

@@ -1,26 +1,16 @@
 .hero {
   position: absolute;
-  padding-top: 150px;
+  padding-top: 300px;
+  padding-left: 400px;
   z-index: 100;
 }
 
 .hero .hero-header {
-  font-size: 3rem;
+  font-size: 4rem;
   color: var(--primary-color);
 }
 
 .hero a:hover {
-  transform: scale(1.1);
-}
-
-.hero i {
-  color: var(--primary-color);
-  animation: anime1 1s ease-out infinite;
-}
-
-@keyframes anime1 {
-  to {
-    transform: translateY(10px);
-    color: var(--secondary-color);
-  }
+  transform: scale(1.01);
+  color: #fff;
 }

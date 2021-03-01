@@ -2,7 +2,9 @@
 
 :root {
   --primary-color: rgb(255, 198, 41);
-  --secondary-color: rgb(184, 255, 70);
+  --secondary-color: rgb(125, 165, 37);
+  --primary-navbar-color: rgba(255, 198, 41, 0.2);
+  --secondary-navbar-color: rgba(125, 165, 37, 0.2);
 }
 
 * {
@@ -14,10 +16,14 @@
 body {
   background-color: #fff;
   line-height: 1.4;
-  overflow-y: hidden;
+  overflow-x: hidden;
 }
 
-h1 {
+h1,
+h2,
+h3,
+h4,
+h5 {
   font-size: 4rem;
   font-family: "Lato", sans-serif;
 }
@@ -25,16 +31,16 @@ h1 {
 p {
   color: #555;
   font-size: 1.25rem;
-  line-height: 1.4;
-  margin: 1rem 0 2rem;
+  line-height: 1.6;
+  margin: 2rem 0;
 }
 
 a {
   text-decoration: none;
 }
 
-a.btn-one {
-  background-color: var(--primary-color) !important;
-  color: #fff !important;
-  transition: 0.5s ease-out;
+.btn-one {
+  border: 1px solid var(--primary-color) !important;
+  color: var(--primary-color) !important;
+  transition: 0.3s ease-out !important;
 }
